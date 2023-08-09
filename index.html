@@ -1,6 +1,5 @@
 <!-- 
-    [1] canvas default Dimension [ width => 300, height =>150]
-    [2] canvas font size must be 0 to avoide any margin
+    [1] select The canvas Elemants
  -->
 <!DOCTYPE html>
 <html lang="en">
@@ -9,18 +8,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Canvas</title>
     </head>
-
 <style>
     *{
         margin: 0px;
         padding: 0px;
         box-sizing: border-box;
     }
+    canvas{
+        border: 3px solid rgb(21, 0, 255);
+    }
 </style>
-
 <body>
-<canvas id="" width="300" height="300" style="background-color: chocolate;font-size: 0px;">
-</canvas><canvas id="" style="background-color: #57d21e;font-size: 0px;"></canvas>
+
+<canvas id="our-canvas" width="300" height="200" style="background-color: #f9ff87;">
+
+    <script>
+        let theCanvas = document.getElementById('our-canvas');
+        let theContext = theCanvas.getContext('2d')
+        theContext.fillStyle = '#F00';
+        theContext.fillRect(10,30,100,50)
+        // theContext.fillRect(x far from left,y far,100,50)
+        // theContext.fillRect(0,0,theCanvas.width,theCanvas.height)
+    </script>
     
 </body>
 </html>
