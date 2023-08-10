@@ -22,12 +22,19 @@
     <script>
         let theCanvas = document.getElementById('our-canvas');
         let theContext = theCanvas.getContext('2d')
+
+        /*
+        x0 => Gradient Start From Left
+        y0 => Gradient Start From Top
+        x1 => Gradient End From Left
+        y1 => Gradient End From Top
+        */
         
         
         // myshape = theContext.createLinearGradient(0,0,300,0)
         // myshape = theContext.createLinearGradient(0,0,0,200)
         myshape = theContext.createLinearGradient(0,0,300,200)
-        
+
         myshape.addColorStop(0,"red")
         myshape.addColorStop(1,"blue")
 
