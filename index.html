@@ -1,6 +1,3 @@
-<!-- 
-    [1] select The canvas Elemants
- -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,15 +17,24 @@
 </style>
 <body>
 
-<canvas id="our-canvas" width="300" height="200" style="background-color: #f9ff87;">
+<canvas id="our-canvas" width="300" height="200">
 
     <script>
         let theCanvas = document.getElementById('our-canvas');
         let theContext = theCanvas.getContext('2d')
-        theContext.fillStyle = '#F00';
-        theContext.fillRect(10,30,100,50)
-        // theContext.fillRect(x far from left,y far,100,50)
-        // theContext.fillRect(0,0,theCanvas.width,theCanvas.height)
+        
+        
+        // myshape = theContext.createLinearGradient(0,0,300,0)
+        // myshape = theContext.createLinearGradient(0,0,0,200)
+        myshape = theContext.createLinearGradient(0,0,300,200)
+        
+        myshape.addColorStop(0,"red")
+        myshape.addColorStop(1,"blue")
+
+        theContext.fillStyle = myshape;
+
+        theContext.fillRect(0,0,theCanvas.width,theCanvas.height);
+
     </script>
     
 </body>
